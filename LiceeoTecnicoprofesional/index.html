@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!--
+    ============================================================================
+    PROYECTO: Liceo Técnico Profesional Fe y Alegría
+    ARCHIVO: index.html
+    DESCRIPCIÓN: Estructura semántica HTML5 de la aplicación web institucional.
+    DOCENCIA: Código estructurado con etiquetas semánticas (<header>, <nav>,
+              <main>, <section>, <article>, <aside>, <footer>, <dialog>)
+              para máxima accesibilidad y comprensión didáctica.
+    ============================================================================
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Liceo Técnico Profesional Fe y Alegría | Admisiones 2026</title>
+    <meta name="description" content="Liceo Técnico Profesional Fe y Alegría: Educación técnica gratuita y de calidad con valores humanos. Bachilleratos en Informática, Contabilidad, Ebanistería, Confección, Enfermería y Mercadeo.">
+    <meta name="theme-color" content="#dc2626">
+
+    <!-- Tipografía Google Fonts: Plus Jakarta Sans (Moderna, geométrica y sumamente legible) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Iconos Lucide (vía CDN para iconos limpios, modernos y livianos) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Hoja de Estilos Principal -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ============================================================
+         01. BARRA DE NAVEGACIÓN FIJA (HEADER & NAVBAR)
+         Estructura fija en la parte superior con efecto de desenfoque.
+         ============================================================ -->
+    <header class="navbar-wrapper" id="headerNavbar">
+        <div class="container navbar-container">
+            <!-- Logotipo Institucional Fe y Alegría -->
+            <a href="#inicio" class="brand-logo" aria-label="Ir al inicio del Liceo Técnico Fe y Alegría">
+                <div class="brand-badge">
+                    <i data-lucide="graduation-cap" class="brand-icon"></i>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-title">Liceo Técnico Profesional</span>
+                    <span class="brand-subtitle">Fe y Alegría · Educación para la Vida</span>
+                </div>
+            </a>
+
+            <!-- Navegación de escritorio -->
+            <nav class="nav-menu" id="navMenu" aria-label="Navegación principal">
+                <ul class="nav-links">
+                    <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                    <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+                    <li><a href="#Areas" class="nav-link">Areas Técnicas</a></li>
+                    <li><a href="#noticias" class="nav-link">Noticias y Eventos</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+
+                <!-- Botón de acción principal en el Navbar -->
+                <div class="nav-actions">
+                    <button type="button" class="btn btn-primary btn-nav open-modal-btn" data-modal="preinscripcionModal">
+                        <i data-lucide="sparkles" class="btn-icon"></i>
+                        <span>Inscripciones 2026</span>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- Botón Hamburguesa para Móviles -->
+            <button type="button" class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="navMenu">
+                <i data-lucide="menu" id="menuIcon"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- ============================================================
+         CONTENIDO PRINCIPAL (<main>)
+         Contiene todas las secciones temáticas de la aplicación.
+         ============================================================ -->
+    <main id="mainContent">
+
+        <!-- ========================================================
+             02. HERO BANNER & ESTADÍSTICAS RÁPIDAS
+             ======================================================== -->
+        <section class="hero-section" id="inicio">
+            <!-- Decoraciones de fondo con degradados suaves -->
+            <div class="hero-bg-glow glow-1"></div>
+            <div class="hero-bg-glow glow-2"></div>
+
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <i data-lucide="shield-check" class="badge-icon"></i>
+                        <span>Inscripciones Abiertas · Ciclo Lectivo 2026</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Forjando el futuro con <span class="highlight-text">educación técnica</span> y valores humanos.
+                    </h1>
+
+                    <p class="hero-description">
+                        En el <strong>Liceo Técnico Profesional Fe y Alegría</strong> impulsamos las habilidades prácticas del siglo XXI mediante una formación integral, innovadora y con una tasa sobresaliente de inserción laboral comunitaria.
+                    </p>
+
+                    <div class="hero-cta-group">
+                        <button type="button" class="btn btn-primary btn-lg open-modal-btn" data-modal="preinscripcionModal">
+                            <i data-lucide="file-signature" class="btn-icon"></i>
+                            <span>Pre-inscríbete Ahora 2026</span>
+                        </button>
+                        <a href="#Areas" class="btn btn-secondary btn-lg">
+                            <i data-lucide="compass" class="btn-icon"></i>
+                            <span>Explorar Areas</span>
+                        </a>
+                    </div>
+
+                    <!-- Mención de valores Fe y Alegría -->
+                    <div class="hero-trust">
+                        <i data-lucide="heart" class="trust-icon"></i>
+                        <span>Compromiso con la educación popular, equidad y transformación comunitaria.</span>
+                    </div>
+                </div>
+
+                <!-- Tarjeta visual del Hero con estadísticas dinámicas -->
+                <div class="hero-visual">
+                    <div class="hero-card-preview">
+                        <div class="hero-image-container">
+                            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80" 
+                                 alt="Estudiantes en talleres del Liceo Técnico Profesional" 
+                                 class="hero-img" 
+                                 loading="lazy">
+                            <div class="hero-image-overlay"></div>
+                            <div class="hero-floating-tag">
+                                <i data-lucide="award" class="tag-icon"></i>
+                                <div>
+                                    <div class="tag-number">Excelencia 2026</div>
+                                    <div class="tag-sub">Tecnicos Oficiales</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mini widget de estado de admisiones -->
+                        <div class="hero-status-widget">
+                            <div class="status-indicator">
+                                <span class="status-dot"></span>
+                                <span class="status-text">Proceso de Inscripcion en Curso</span>
+                            </div>
+                            <div class="status-dates">Cupos limitados por especialidad técnica</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Barra de Estadísticas Rápidas -->
+            <div class="container">
+                <div class="stats-bar">
+                    <div class="stat-item">
+                        <div class="stat-icon-wrapper">
+                            <i data-lucide="users" class="stat-icon"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number" data-target="1250">+900</span>
+                            <span class="stat-label">Alumnos Activos</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-divider"></div>
+
+                    <div class="stat-item">
+                        <div class="stat-icon-wrapper">
+                            <i data-lucide="wrench" class="stat-icon"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number">6</span>
+                            <span class="stat-label">Areas Técnicas</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-divider"></div>
+
+                    <div class="stat-item">
+                        <div class="stat-icon-wrapper">
+                            <i data-lucide="briefcase" class="stat-icon"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number">94%</span>
+                            <span class="stat-label">Inserción Laboral</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-divider"></div>
+
+                    <div class="stat-item">
+                        <div class="stat-icon-wrapper">
+                            <i data-lucide="trophy" class="stat-icon"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number">+35</span>
+                            <span class="stat-label">Años de Trayectoria</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================
+             SECCIÓN INSTITUCIONAL (NOSOTROS - FE Y ALEGRÍA)
+             ======================================================== -->
+        <section class="section about-section" id="nosotros">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Nuestra Identidad</span>
+                    <h2 class="section-title">Educación con Sentido Humano y Futuro Técnico</h2>
+                    <p class="section-subtitle">
+                        Pertenecemos al Movimiento Internacional de Educación Popular Fe y Alegría, promoviendo el desarrollo de talentos técnicos con sólida formación ética y compromiso comunitario.
+                    </p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon-box icon-blue">
+                            <i data-lucide="cpu" class="feature-icon"></i>
+                        </div>
+                        <h3 class="feature-title">Talleres Equipados</h3>
+                        <p class="feature-desc">Laboratorios de informática, talleres de ebanistería, confección y enfermería dotados para la práctica intensiva y real.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon-box icon-amber">
+                            <i data-lucide="handshake" class="feature-icon"></i>
+                        </div>
+                        <h3 class="feature-title">Pasantías Empresariales</h3>
+                        <p class="feature-desc">Alianzas estratégicas con empresas e instituciones locales para garantizar prácticas formativas en el último año lectivo.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon-box icon-sky">
+                            <i data-lucide="book-open-check" class="feature-icon"></i>
+                        </div>
+                        <h3 class="feature-title">Títulos con Certificacion oficial</h3>
+                        <p class="feature-desc">Planes de estudio avalados por el Ministerio de Educación, otorgando el título de Bachiller Técnico Profesional.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon-box icon-rose">
+                            <i data-lucide="heart-handshake" class="feature-icon"></i>
+                        </div>
+                        <h3 class="feature-title">Valores Fe y Alegría</h3>
+                        <p class="feature-desc">Formamos personas solidarias, éticas y críticas, preparadas no solo para trabajar sino para transformar su entorno.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================
+             03. SECCIÓN INTERACTIVA DE CARRERAS TÉCNICAS
+             Sistema de pestañas para explorar cada especialidad
+             ======================================================== -->
+        <section class="section careers-section" id="carreras">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Oferta Académica 2026</span>
+                    <h2 class="section-title">Elige tu Area Técnica Profesional</h2>
+                    <p class="section-subtitle">
+                        Nuestras 6 especialidades técnicas combinan 60% de formación práctica en talleres especializados y 40% de formación general y científica.
+                    </p>
+                </div>
+
+                <!-- Botonera interactiva de pestañas (Tabs) -->
+                <div class="careers-tabs-wrapper" role="tablist" aria-label="Especialidades técnicas disponibles">
+                    <button class="career-tab-btn active" role="tab" aria-selected="true" aria-controls="panel-informatica" id="tab-informatica" data-career="informatica">
+                        <i data-lucide="laptop" class="tab-icon"></i>
+                        <span>Informática</span>
+                    </button>
+
+                    <button class="career-tab-btn" role="tab" aria-selected="false" aria-controls="panel-contabilidad" id="tab-contabilidad" data-career="contabilidad">
+                        <i data-lucide="calculator" class="tab-icon"></i>
+                        <span>Contabilidad</span>
+                    </button>
+
+                    <button class="career-tab-btn" role="tab" aria-selected="false" aria-controls="panel-ebanisteria" id="tab-ebanisteria" data-career="ebanisteria">
+                        <i data-lucide="hammer" class="tab-icon"></i>
+                        <span>Ebanistería</span>
+                    </button>
+
+                    <button class="career-tab-btn" role="tab" aria-selected="false" aria-controls="panel-confeccion" id="tab-confeccion" data-career="confeccion">
+                        <i data-lucide="scissors" class="tab-icon"></i>
+                        <span>Confección y Patronaje</span>
+                    </button>
+
+                    <button class="career-tab-btn" role="tab" aria-selected="false" aria-controls="panel-enfermeria" id="tab-enfermeria" data-career="enfermeria">
+                        <i data-lucide="stethoscope" class="tab-icon"></i>
+                        <span>Enfermería</span>
+                    </button>
+
+                    <button class="career-tab-btn" role="tab" aria-selected="false" aria-controls="panel-mercadeo" id="tab-mercadeo" data-career="mercadeo">
+                        <i data-lucide="trending-up" class="tab-icon"></i>
+                        <span>Mercadeo</span>
+                    </button>
+                </div>
+
+                <!-- Contenedores con el perfil de cada carrera técnica -->
+                <div class="career-panels-container">
+
+                    <!-- Panel 1: INFORMÁTICA -->
+                    <article class="career-panel active" id="panel-informatica" role="tabpanel" aria-labelledby="tab-informatica">
+                        <div class="career-detail-grid">
+                            <div class="career-info-side">
+                                <div class="career-header-info">
+                                    <div class="career-tag-badge">
+                                        <i data-lucide="terminal" class="tag-mini-icon"></i>
+                                        <span>Tecnología & Desarrollo</span>
+                                    </div>
+                                    <h3 class="career-title">Bachillerato Técnico en Informática</h3>
+                                    <p class="career-lead">
+                                        Diseña, programa y administra sistemas informáticos, aplicaciones web modernas, bases de datos y redes locales con altos estándares de calidad.
+                                    </p>
+                                </div>
+
+                                <div class="career-meta-cards">
+                                    <div class="meta-card">
+                                        <i data-lucide="clock" class="meta-icon"></i>
+                                        <div>
+                                            <span class="meta-label">Duración</span>
+                                            <span class="meta-val">3 Años Académicos</span>
+                                        </div>
+                                    </div>
+                                    <div class="meta-card">
+                                        <i data-lucide="layers" class="meta-icon"></i>
+                                        <div>
+                                            <span class="meta-label">Modalidad</span>
+                                            <span class="meta-val">Teórico-Práctica (60% Lab)</span>
+                                        </div>
+                                    </div>
+                                    <div class="meta-card">
+                                        <i data-lucide="shield-check" class="meta-icon"></i>
+                                        <div>
+                                            <span class="meta-label">Título</span>
+                                            <span class="meta-val">Técnico en Informática</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="career-blocks">
+                                    <div class="career-block">
+                                        <h4 class="block-title"><i data-lucide="check-circle-2" class="block-icon"></i> Perfil de Egreso</h4>
+                                        <p class="block-text">El egresado domina el desarrollo web (HTML, CSS, JS, Python), diseño e implementación de bases de datos relacionales, ensamblaje y mantenimiento de equipos, y configuración de redes LAN corporativas.</p>
+                                    </div>
+
+                                    <div class="career-block">
+                                        <h4 class="block-title"><i data-lucide="book-open" class="block-icon"></i> Módulos Clave</h4>
+                                        <ul class="modules-list">
+                                            <li><i data-lucide="chevron-right" class="li-icon"></i> Desarrollo de Aplicaciones Web y Móviles</li>
+                                            <li><i data-lucide="chevron-right" class="li-icon"></i> Gestión de Bases de Datos SQL</li>
+                                            <li><i data-lucide="chevron-right" class="li-icon"></i> Infraestructura de Redes y Ciberseguridad</li>
+                                            <li><i data-lucide="chevron-right" class="li-icon"></i> Soporte y Mantenimiento de Hardware</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="career-block">
+                                        <h4 class="block-title"><i data-lucide="briefcase" class="block-icon"></i> Campo Laboral</h4>
+                                        <p class="block-text">Empresas de tecnología, departamentos de TI corporativos, agencias digitales, soporte técnico y emprendimiento de software freelance.</p>
+                                    </div>
+                                </div>
+
+                                <div class="career-action-box">
+                                    <button type="button" class="btn btn-primary open-modal-btn" data-modal="preinscripcionModal" data-preselect="informatica">
+                                        <i data-lucide="file-plus" class="btn-icon"></i>
+                                        <span>Pre-inscribirme en Informática</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="career-image-side">
+                                <div class="career-media-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" alt="Taller de Informática y Programación" class="career-img" loading="lazy">
+                                    <div class="career-media-badge">
+                                        <i data-lucide="cpu" class="badge-icon"></i>
+                                        <span>Lab de Cómputo Moderno</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Panel 2: CONTABILIDAD -->
+                    <article class="career-panel" id="panel-contabilidad" role="tabpanel" aria-labelledby="tab-contabilidad" hidden>
+                        <div class="career-detail-grid">
+                            <div class="career-info-side">
+                                <div class="career-header-info">
+                                    <div class="career-tag-badge">
+                                        <i data-lucide="bar-chart-3" class="tag-mini-icon"></i>
+                                        <span>Finanzas & Administración</span>
+                                    </div>
+                                    <h3 class="career-title">Bachillerato Técnico en Contabilidad y Finanzas</h3>
+                                    <p class="career-lead">
+                                        Administra los recursos económicos, tributarios y contables de las organizaciones con honestidad, precisión técnica y dominio de software financiero.
+                                    </p>
+                                </div>
+
+                                <div class="career-meta-cards">
+                                    <div class="meta-card">
+                                        <i data-lucide="clock" class="meta-icon"></i>
+                                        <div><span class="meta-label">Duración</span><span class="meta-val">3 Años Académicos</span></div>
+                                    </div>
+                                    <div class="meta-card">
+                                        <i data-lucide="layers" class="meta-icon"></i>
+                                        <div><span class="meta-label">Modalidad</span><span class="meta-val">Teórico-Práctica</span></div>
+                                    </div>
+                                    <div class="meta-card">
+                                        <i data-lucide="shield-check" class="meta-icon"></i>
+                                        <div><span class="meta-label">Título</span><span class="meta-val">Técnico en Contabilidad</span></div>
+                                    </div>
+                                </div>
+
+                                <div class="career-blocks">
+                                    <div class="career-block">
+                                        <h4 class="block-title"><i data-lucide="check-circle-2" class="block-icon"></i> Perfil de Egreso</h4>
+                                        <p class="block-text">Capaz de registrar operaciones financieras, elaborar estados de resultados, liquidar nóminas y prestaciones, calcular declaraciones de impuestos y utilizar hojas de cálculo a nivel profesional.</p>
+                                    </div>
+
+                                    <div class="career-block">
+                                        <h4 class="block-title"><i data-lucide="book-open" class="block-icon"></i> Módulos Clave</h4>
+                                        <ul class="modules-list">
+                                            <li><i data-lucide="chevron-right" class="li-icon"></i> Contabilidad General, Costos y Presupuestos</li>
+                                            <li><i data-lucide="chevron-right" class="li-icon"></i> Legislación Fiscal y Tributaria</li>
+                                            <li><i data-lucide="chevron-right" class="li-icon"></i> Sistemas Contables Digitales y ERP</li>
+                                            <li><i data-lucide="chevron-right" class="li-icon"></i> Auditoría Financiera Básica</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="career-block">
+                                        <h4 class="block-title"><i data-lucide="briefcase" class="block-icon"></i> Campo Laboral</h4>
+                                        <p class="block-text">Bancos, cooperativas, empresas comerciales, firmas de auditoría, departamentos de nómina y asesoría contable independiente.</p>
+                                    </div>
+                                </div>
+
+                                <div class="career-action-box">
+                                    <button type="button" class="btn btn-primary open-modal-btn" data-modal="preinscripcionModal" data-preselect="contabilidad">
+                                        <i data-lucide="file-plus" class="btn-icon"></i>
+                                        <span>Pre-inscribirme en Contabilidad</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="career-image-side">
+                                <div class="career-media-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80" alt="Gestión de contabilidad y finanzas" class="career-img" loading="lazy">
+                                    <div class="career-media-badge">
+                                        <i data-lucide="pie-chart" class="badge-icon"></i>
+                                        <span>Simuladores Financieros</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Panel 3: EBANISTERÍA -->
+                    <article class="career-panel" id="panel-ebanisteria" role="tabpanel" aria-labelledby="tab-ebanisteria" hidden>
+                        <div class="career-detail-grid">
+                            <div class="career-info-side">
+                                <div class="career-header-info">
+                                    <div class="career-tag-badge">
+                                        <i data-lucide="box" class="tag-mini-icon"></i>
+                                        <span>Diseño & Manufactura</span>
+                                    </div>
+                                    <h3 class="career-title">Bachillerato Técnico en Ebanistería y Diseño de Muebles</h3>
+                                    <p class="career-lead">
+                                        Transforma la madera en mobiliario funcional y estético combinando técnicas tradicionales de ensamble, corte computarizado y acabados de alta gama.
+                                    </p>
+                                </div>
+
+                                <div class="career-meta-cards">
+                                    <div class="meta-card">
+                                        <i data-lucide="clock" class="meta-icon"></i>
+                                        <div><span class="meta-label">Duración</span><span class="meta-val">3 Años Académicos</span></div>
+                                    </div>
+                                    <div class="meta-card">
+                                        <i data-lucide="layers" class="meta-icon"></i>
+                                        <div><span class="meta-label">Modalidad</span><span class="meta-val">Taller Práctico (70%)</span></div>
+                                    </div>
+                                    <div class="meta-card">
+                                        <i data-lucide="shield-check" class="meta-icon"></i>
+                                        <div><span class="meta-label">Título</span><span class="meta-val">Técnico en Ebanistería</span></div>
+                                    </div>
+                                </div>
+
+                                <div class="career-blocks">
+                                    <div class="career-block">
+                                        <h4 class="block-title"><i data-lucide="check-circle-2" class="block-icon"></i> Perfil de Egreso</h4>
+                                        <p class="block-text">Interpreta planos arquitectónicos y de carpintería, utiliza maquinaria de precisión con normas de seguridad industrial y aplica lacas, tintes y barnices ecológicos.</p>
+                                    </div>
+
+                                    <div class="career-block">
+                                        <h4 class="block-title"><i data-lucide="book-open" class="block-icon"></i> Módulos Clave</h4>
+                                        <ul class="modules-list">
+                                            <li><i data-lucide="chevron-right" class="li-icon"></i> Dibujo Técnico y Modelado de Mobiliario CAD</li>
+                                            <li><i data-lucide="chevron-right" class="li-icon"></i> Manejo Seguro de Maquinaria Industrial</li>
+                                            <li><i data-lucide="chevron-right" class="li-icon"></i> Técnicas de Ensamble y Tallado Fino</li>
+                                            <li><i data-lucide="chevron-right" class="li-icon"></i> Acabados Especiales y Tapicería</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="career-block">
+                                        <h4 class="block-title"><i data-lucide="briefcase" class="block-icon"></i> Campo Laboral</h4>
+                                        <p class="block-text">Talleres de diseño de interiores, fábricas de muebles, constructoras residenciales, restauración y emprendimiento propio de carpintería moderna.</p>
+                                    </div>
+                                </div>
+
+                                <div class="career-action-box">
+                                    <button type="button" class="btn btn-primary open-modal-btn" data-modal="preinscripcionModal" data-preselect="ebanisteria">
+                                        <i data-lucide="file-plus" class="btn-icon"></i>
+                                        <span>Pre-inscribirme en Ebanistería</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="career-image-side">
+                                <div class="career-media-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Taller de Ebanistería y Madera" class="career-img" loading="lazy">
+                                    <div class="career-media-badge">
+                                        <i data-lucide="hammer" class="badge-icon"></i>
+                                        <span>Taller de Maquinaria Industrial</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Panel 4: CONFECCIÓN Y PATRONAJE -->
+                    <article class="career-panel" id="panel-confeccion" role="tabpanel" aria-labelledby="tab-confeccion" hidden>
+                        <div class="career-detail-grid">
+                            <div class="career-info-side">
+                                <div class="career-header-info">
+                                    <div class="career-tag-badge">
+                                        <i data-lucide="sparkles" class="tag-mini-icon"></i>
+                                        <span>Moda & Creación Textil</span>
+                                    </div>
+                                    <h3 class="career-title">Bachillerato Técnico en Confección y Patronaje</h3>
+                                    <p class="career-lead">
+                                        Domina el diseño, la moldería industrial, el corte y ensamble de prendas de vestir con creatividad, calidad textil y visión emprendedora.
+                                    </p>
+                                </div>
+
+                                <div class="career-meta-cards">
+                                    <div class="meta-card">
+                                        <i data-lucide="clock" class="meta-icon"></i>
+                                        <div><span class="meta-label">Duración</span><span class="meta-val">3 Años Académicos</span></div>
+                                    </div>
+                                    <div class="meta-card">
+                                        <i data-lucide="layers" class="meta-icon"></i>
+                                        <div><span class="meta-label">Modalidad</span><span class="meta-val">Talleres de Confección</span></div>
+                                    </div>
+                                    <div class="meta-card">
+                                        <i data-lucide="shield-check" class="meta-icon"></i>
+                                        <div><span class="meta-label">Título</span><span class="meta-val">Técnico en Patronaje y Confección</span></div>
+                                    </div>
+                                </div>
+
+                                <div class="career-blocks">
+                                    <div class="career-block">
+                                        <h4 class="block-title"><i data-lucide="check-circle-2" class="block-icon"></i> Perfil de Egreso</h4>
+                                        <p class="block-text">Crea patrones base y transformaciones, opera máquinas industriales de coser (plana, sobrehiladora, collaretera), evalúa fibras textiles y coordina líneas de confección en serie.</p>
+                                    </div>
+
+                                    <div class="career-block">
+                                        <h4 class="block-title"><i data-lucide="book-open" class="block-icon"></i> Módulos Clave</h4>
+                                        <ul class="modules-list">
+                                            <li><i data-lucide="chevron-right" class="li-icon"></i> Patronaje Industrial Femenino, Masculino e Infantil</li>
+                                            <li><i data-lucide="chevron-right" class="li-icon"></i> Operación de Máquinas Industriales de Coser</li>
+                                            <li><i data-lucide="chevron-right" class="li-icon"></i> Escalado de Patrones y Corte Automatizado</li>
+                                            <li><i data-lucide="chevron-right" class="li-icon"></i> Gestión de Marcas y Talleres de Moda</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="career-block">
+                                        <h4 class="block-title"><i data-lucide="briefcase" class="block-icon"></i> Campo Laboral</h4>
+                                        <p class="block-text">Industrias textiles, talleres de alta costura, vestuario institucional, marcas independientes de moda y atelier propio de diseño.</p>
+                                    </div>
+                                </div>
+
+                                <div class="career-action-box">
+                                    <button type="button" class="btn btn-primary open-modal-btn" data-modal="preinscripcionModal" data-preselect="confeccion">
+                                        <i data-lucide="file-plus" class="btn-icon"></i>
+                                        <span>Pre-inscribirme en Confección</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="career-image-side">
+                                <div class="career-media-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=800&q=80" alt="Taller de Confección y Patronaje" class="career-img" loading="lazy">
+                                    <div class="career-media-badge">
+                                        <i data-lucide="scissors" class="badge-icon"></i>
+                                        <span>Taller Textil Industrial</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Panel 5: ENFERMERÍA -->
+                    <article class="career-panel" id="panel-enfermeria" role="tabpanel" aria-labelledby="tab-enfermeria" hidden>
+                        <div class="career-detail-grid">
+                            <div class="career-info-side">
+                                <div class="career-header-info">
+                                    <div class="career-tag-badge">
+                                        <i data-lucide="heart-pulse" class="tag-mini-icon"></i>
+                                        <span>Salud & Cuidados Humanos</span>
+                                    </div>
+                                    <h3 class="career-title">Bachillerato Técnico en Cuidados de Enfermería</h3>
+                                    <p class="career-lead">
+                                        Brinda cuidados asistenciales de calidad con profunda vocación humana, ética médica y compromiso con la salud preventiva comunitaria.
+                                    </p>
+                                </div>
+
+                                <div class="career-meta-cards">
+                                    <div class="meta-card">
+                                        <i data-lucide="clock" class="meta-icon"></i>
+                                        <div><span class="meta-label">Duración</span><span class="meta-val">3 Años Académicos</span></div>
+                                    </div>
+                                    <div class="meta-card">
+                                        <i data-lucide="layers" class="meta-icon"></i>
+                                        <div><span class="meta-label">Modalidad</span><span class="meta-val">Práctica Clínica & Comunitaria</span></div>
+                                    </div>
+                                    <div class="meta-card">
+                                        <i data-lucide="shield-check" class="meta-icon"></i>
+                                        <div><span class="meta-label">Título</span><span class="meta-val">Técnico en Cuidados de Enfermería</span></div>
+                                    </div>
+                                </div>
+
+                                <div class="career-blocks">
+                                    <div class="career-block">
+                                        <h4 class="block-title"><i data-lucide="check-circle-2" class="block-icon"></i> Perfil de Egreso</h4>
+                                        <p class="block-text">Aplica protocolos de bioseguridad, monitoreo de signos vitales, administración de fármacos por indicación médica, primeros auxilios y atención materno-infantil con respeto y calidez.</p>
+                                    </div>
+
+                                    <div class="career-block">
+                                        <h4 class="block-title"><i data-lucide="book-open" class="block-icon"></i> Módulos Clave</h4>
+                                        <ul class="modules-list">
+                                            <li><i data-lucide="chevron-right" class="li-icon"></i> Fundamentos y Técnicas de Enfermería</li>
+                                            <li><i data-lucide="chevron-right" class="li-icon"></i> Farmacología Básica y Dosificación</li>
+                                            <li><i data-lucide="chevron-right" class="li-icon"></i> Primeros Auxilios y Soporte Vital Básico</li>
+                                            <li><i data-lucide="chevron-right" class="li-icon"></i> Salud Pública y Prevención Comunitaria</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="career-block">
+                                        <h4 class="block-title"><i data-lucide="briefcase" class="block-icon"></i> Campo Laboral</h4>
+                                        <p class="block-text">Hospitales y clínicas de salud, centros de atención primaria comunitaria, hogares geriátricos, servicios de emergencia y brigadas de salud.</p>
+                                    </div>
+                                </div>
+
+                                <div class="career-action-box">
+                                    <button type="button" class="btn btn-primary open-modal-btn" data-modal="preinscripcionModal" data-preselect="enfermeria">
+                                        <i data-lucide="file-plus" class="btn-icon"></i>
+                                        <span>Pre-inscribirme en Enfermería</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="career-image-side">
+                                <div class="career-media-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" alt="Laboratorio de simulación clínica en enfermería" class="career-img" loading="lazy">
+                                    <div class="career-media-badge">
+                                        <i data-lucide="activity" class="badge-icon"></i>
+                                        <span>Simulación Clínica y Bioseguridad</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Panel 6: MERCADEO -->
+                    <article class="career-panel" id="panel-mercadeo" role="tabpanel" aria-labelledby="tab-mercadeo" hidden>
+                        <div class="career-detail-grid">
+                            <div class="career-info-side">
+                                <div class="career-header-info">
+                                    <div class="career-tag-badge">
+                                        <i data-lucide="shopping-bag" class="tag-mini-icon"></i>
+                                        <span>Comercio & Marketing Digital</span>
+                                    </div>
+                                    <h3 class="career-title">Bachillerato Técnico en Mercadeo y Gestión Comercial</h3>
+                                    <p class="career-lead">
+                                        Diseña estrategias comerciales persuasivas, analiza las tendencias del consumidor y gestiona canales de venta digital y comercio electrónico.
+                                    </p>
+                                </div>
+
+                                <div class="career-meta-cards">
+                                    <div class="meta-card">
+                                        <i data-lucide="clock" class="meta-icon"></i>
+                                        <div><span class="meta-label">Duración</span><span class="meta-val">3 Años Académicos</span></div>
+                                    </div>
+                                    <div class="meta-card">
+                                        <i data-lucide="layers" class="meta-icon"></i>
+                                        <div><span class="meta-label">Modalidad</span><span class="meta-val">Estrategia & Laboratorio Digital</span></div>
+                                    </div>
+                                    <div class="meta-card">
+                                        <i data-lucide="shield-check" class="meta-icon"></i>
+                                        <div><span class="meta-label">Título</span><span class="meta-val">Técnico en Mercadeo y Ventas</span></div>
+                                    </div>
+                                </div>
+
+                                <div class="career-blocks">
+                                    <div class="career-block">
+                                        <h4 class="block-title"><i data-lucide="check-circle-2" class="block-icon"></i> Perfil de Egreso</h4>
+                                        <p class="block-text">Conoce técnicas de venta consultiva, gestión de redes sociales empresariales (Community Management), investigación de mercado y atención al cliente con altos estándares.</p>
+                                    </div>
+
+                                    <div class="career-block">
+                                        <h4 class="block-title"><i data-lucide="book-open" class="block-icon"></i> Módulos Clave</h4>
+                                        <ul class="modules-list">
+                                            <li><i data-lucide="chevron-right" class="li-icon"></i> Marketing Digital, SEO y Redes Sociales</li>
+                                            <li><i data-lucide="chevron-right" class="li-icon"></i> Técnicas de Negociación y Cierre de Ventas</li>
+                                            <li><i data-lucide="chevron-right" class="li-icon"></i> Investigación de Mercados y Comportamiento</li>
+                                            <li><i data-lucide="chevron-right" class="li-icon"></i> Comercio Electrónico y Gestión de Clientes (CRM)</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="career-block">
+                                        <h4 class="block-title"><i data-lucide="briefcase" class="block-icon"></i> Campo Laboral</h4>
+                                        <p class="block-text">Agencias publicitarias, cadenas comerciales, empresas de retail, departamentos comerciales y gestión de negocios virtuales propios.</p>
+                                    </div>
+                                </div>
+
+                                <div class="career-action-box">
+                                    <button type="button" class="btn btn-primary open-modal-btn" data-modal="preinscripcionModal" data-preselect="mercadeo">
+                                        <i data-lucide="file-plus" class="btn-icon"></i>
+                                        <span>Pre-inscribirme en Mercadeo</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="career-image-side">
+                                <div class="career-media-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80" alt="Estrategias de mercadeo y negocios" class="career-img" loading="lazy">
+                                    <div class="career-media-badge">
+                                        <i data-lucide="trending-up" class="badge-icon"></i>
+                                        <span>Laboratorio de Negocios Digitales</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================
+             04. NOTICIAS Y CALENDARIO DE EVENTOS ESCOLARES
+             Diseño en dos columnas coordinadas
+             ======================================================== -->
+        <section class="section news-calendar-section" id="noticias">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Vida Estudiantil</span>
+                    <h2 class="section-title">Noticias y Calendario de Eventos</h2>
+                    <p class="section-subtitle">
+                        Mantente al tanto de los logros de nuestros alumnos, ferias técnicas, convenios institucionales y actividades de nuestra comunidad escolar.
+                    </p>
+                </div>
+
+                <div class="news-calendar-grid">
+                    <!-- Columna Izquierda: Últimas Noticias -->
+                    <div class="news-column">
+                        <div class="column-header">
+                            <div class="column-title-group">
+                                <i data-lucide="newspaper" class="column-icon"></i>
+                                <h3 class="column-title">Últimas Noticias</h3>
+                            </div>
+                            <span class="column-badge">Comunidad Fe y Alegría</span>
+                        </div>
+
+                        <div class="news-list">
+                            <!-- Noticia 1 -->
+                            <article class="news-card">
+                                <div class="news-card-image">
+                                    <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=500&q=80" alt="Feria de Ciencias y Tecnología" loading="lazy">
+                                    <span class="news-category">Innovación Técnica</span>
+                                </div>
+                                <div class="news-card-body">
+                                    <div class="news-meta">
+                                        <i data-lucide="calendar" class="meta-mini-icon"></i>
+                                        <time datetime="2026-10-24">24 de Octubre, 2026</time>
+                                    </div>
+                                    <h4 class="news-title">
+                                        Gran éxito en la Feria Anual de Proyectos Técnicos y Comunitarios
+                                    </h4>
+                                    <p class="news-excerpt">
+                                        Estudiantes de Informática y Ebanistería presentaron prototipos tecnológicos y mobiliario ergonómico sustentable para escuelas comunitarias.
+                                    </p>
+                                    <a href="#noticias" class="news-read-more" onclick="alert('Detalle de noticia: Los alumnos presentaron más de 25 proyectos con alto impacto social.'); return false;">
+                                        <span>Leer artículo completo</span>
+                                        <i data-lucide="arrow-right" class="arrow-icon"></i>
+                                    </a>
+                                </div>
+                            </article>
+
+                            <!-- Noticia 2 -->
+                            <article class="news-card">
+                                <div class="news-card-image">
+                                    <img src="https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=500&q=80" alt="Alianza con empresas del sector productivo" loading="lazy">
+                                    <span class="news-category">Alianzas</span>
+                                </div>
+                                <div class="news-card-body">
+                                    <div class="news-meta">
+                                        <i data-lucide="calendar" class="meta-mini-icon"></i>
+                                        <time datetime="2026-10-18">18 de Octubre, 2026</time>
+                                    </div>
+                                    <h4 class="news-title">
+                                        Nuevo convenio de pasantías con más de 30 empresas aliadas
+                                    </h4>
+                                    <p class="news-excerpt">
+                                        El acuerdo garantiza que el 100% de los estudiantes del último año de Contabilidad, Mercadeo y Enfermería realicen prácticas formativas remuneradas.
+                                    </p>
+                                    <a href="#noticias" class="news-read-more" onclick="alert('Detalle de noticia: Convenio firmado con la Cámara de Comercio local para pasantías técnicas.'); return false;">
+                                        <span>Leer artículo completo</span>
+                                        <i data-lucide="arrow-right" class="arrow-icon"></i>
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- Columna Derecha: Calendario Escolar -->
+                    <div class="calendar-column">
+                        <div class="column-header">
+                            <div class="column-title-group">
+                                <i data-lucide="calendar-days" class="column-icon"></i>
+                                <h3 class="column-title">Próximos Eventos</h3>
+                            </div>
+                            <span class="column-badge badge-amber">Agenda 2026-2027</span>
+                        </div>
+
+                        <div class="calendar-events-list">
+                            <!-- Evento 1 -->
+                            <div class="event-item">
+                                <div class="event-date-badge">
+                                    <span class="event-month">NOV</span>
+                                    <span class="event-day">12</span>
+                                </div>
+                                <div class="event-details">
+                                    <div class="event-tag-badge">Puertas Abiertas</div>
+                                    <h4 class="event-title">Jornada Open House: Conoce Nuestros Talleres</h4>
+                                    <p class="event-desc">Recorrido guiado para postulantes y familias interesadas en las carreras técnicas del ciclo 2026.</p>
+                                    <div class="event-location">
+                                        <i data-lucide="map-pin" class="loc-icon"></i>
+                                        <span>Auditorio Central y Talleres Técnicos · 9:00 AM</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Evento 2 -->
+                            <div class="event-item">
+                                <div class="event-date-badge">
+                                    <span class="event-month">NOV</span>
+                                    <span class="event-day">27</span>
+                                </div>
+                                <div class="event-details">
+                                    <div class="event-tag-badge badge-fashion">Desfile & Expo</div>
+                                    <h4 class="event-title">Exhibición de Modas y Muebles Fe y Alegría</h4>
+                                    <p class="event-desc">Pasarela de prendas creadas por Confección y Patronaje, junto con la galería de diseño de Ebanistería.</p>
+                                    <div class="event-location">
+                                        <i data-lucide="map-pin" class="loc-icon"></i>
+                                        <span>Plaza Cívica Institucional · 4:00 PM</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Evento 3 -->
+                            <div class="event-item">
+                                <div class="event-date-badge">
+                                    <span class="event-month">DIC</span>
+                                    <span class="event-day">15</span>
+                                </div>
+                                <div class="event-details">
+                                    <div class="event-tag-badge badge-health">Salud Comunitaria</div>
+                                    <h4 class="event-title">Jornada de Vacunación y Control Preventivo</h4>
+                                    <p class="event-desc">Práctica comunitaria dirigida por docentes y alumnos de Enfermería en beneficio de los vecinos del sector.</p>
+                                    <div class="event-location">
+                                        <i data-lucide="map-pin" class="loc-icon"></i>
+                                        <span>Dispensario Escolar Fe y Alegría · 8:30 AM</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Evento 4 -->
+                            <div class="event-item event-highlight">
+                                <div class="event-date-badge date-primary">
+                                    <span class="event-month">ENE</span>
+                                    <span class="event-day">10</span>
+                                </div>
+                                <div class="event-details">
+                                    <div class="event-tag-badge badge-important">Admisiones 2026</div>
+                                    <h4 class="event-title">Inicio de Evaluaciones Diagnósticas de Admisión</h4>
+                                    <p class="event-desc">Entrevistas diagnósticas y asignación de cupos por especialidad técnica. ¡Pre-inscríbete a tiempo!</p>
+                                    <div class="event-location">
+                                        <i data-lucide="clock" class="loc-icon"></i>
+                                        <span>Convocatoria por turno y horario asignado</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================
+             SECCIÓN CALL TO ACTION (CTA) INTERMEDIA
+             ======================================================== -->
+        <section class="section cta-banner-section">
+            <div class="container">
+                <div class="cta-banner-box">
+                    <div class="cta-content">
+                        <span class="cta-subtitle">Asegura tu futuro vocacional</span>
+                        <h2 class="cta-title">¿Listo para convertir tu pasión en una carrera técnica?</h2>
+                        <p class="cta-text">
+                            No dejes pasar la oportunidad de formarte con nosotros en el periodo lectivo 2026. La educación técnica te abre las puertas del empleo y la universidad.
+                        </p>
+                    </div>
+                    <div class="cta-action">
+                        <button type="button" class="btn btn-gold btn-lg open-modal-btn" data-modal="preinscripcionModal">
+                            <i data-lucide="send" class="btn-icon"></i>
+                            <span>Llenar Formulario de Pre-inscripción</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================
+             CONTACTO Y UBICACIÓN
+             ======================================================== -->
+        <section class="section contact-section" id="contacto">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Canales de Atención</span>
+                    <h2 class="section-title">Estamos para Acompañarte</h2>
+                    <p class="section-subtitle">
+                        Visítanos en nuestras instalaciones o contáctanos a través de secretaría docente para coordinar una visita orientativa.
+                    </p>
+                </div>
+
+                <div class="contact-cards-grid">
+                    <div class="contact-info-card">
+                        <div class="contact-icon-wrapper">
+                            <i data-lucide="map-pin" class="contact-icon"></i>
+                        </div>
+                        <h4 class="contact-card-title">Dirección Institucional</h4>
+                        <p class="contact-card-desc">Av. Fe y Alegría No. 45, Sector Los Educadores, Rep. Dominicana.</p>
+                        <span class="contact-detail-link">Ver mapa en Google Maps</span>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="contact-icon-wrapper">
+                            <i data-lucide="phone-call" class="contact-icon"></i>
+                        </div>
+                        <h4 class="contact-card-title">Teléfonos de Secretaría</h4>
+                        <p class="contact-card-desc">Llámanos de Lunes a Viernes de 8:00 AM a 4:30 PM.</p>
+                        <a href="tel:+18095550192" class="contact-detail-link">+1 (809) 555-0192 / Ext. 104</a>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="contact-icon-wrapper">
+                            <i data-lucide="mail" class="contact-icon"></i>
+                        </div>
+                        <h4 class="contact-card-title">Correo Electrónico</h4>
+                        <p class="contact-card-desc">Escríbenos para consultas de admisiones y becas.</p>
+                        <a href="mailto:admisiones@liceofeyalegria.edu" class="contact-detail-link">admisiones@liceofeyalegria.edu</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================================================
+         05. MODAL INTERACTIVO DE PRE-INSCRIPCIÓN ESCOLAR
+         Implementado con accesibilidad ARIA y formulario validado.
+         ============================================================ -->
+    <div class="modal-backdrop" id="preinscripcionModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Encabezado del Modal -->
+                <div class="modal-header">
+                    <div class="modal-title-group">
+                        <div class="modal-badge-icon">
+                            <i data-lucide="file-check-2"></i>
+                        </div>
+                        <div>
+                            <h3 class="modal-title" id="modalTitle">Pre-inscripción Escolar 2026</h3>
+                            <p class="modal-subtitle">Liceo Técnico Profesional Fe y Alegría</p>
+                        </div>
+                    </div>
+                    <button type="button" class="modal-close-btn" id="closeModalBtn" aria-label="Cerrar ventana de pre-inscripción">
+                        <i data-lucide="x"></i>
+                    </button>
+                </div>
+
+                <!-- Formulario de Inscripción -->
+                <form id="preinscripcionForm" class="modal-form" novalidate>
+                    <!-- Vista Formulario Normal -->
+                    <div id="formFieldsContainer">
+                        <p class="form-instructions">
+                            Completa los datos del postulante para registrar tu solicitud. Los campos marcados con (<span class="req">*</span>) son obligatorios.
+                        </p>
+
+                        <!-- Nombre Completo -->
+                        <div class="form-group">
+                            <label for="postulanteNombre" class="form-label">
+                                Nombre Completo del Postulante <span class="req">*</span>
+                            </label>
+                            <div class="input-with-icon">
+                                <i data-lucide="user" class="input-icon"></i>
+                                <input type="text" id="postulanteNombre" name="nombre" class="form-control" placeholder="Ej. Ana María Rosario" required autocomplete="name">
+                            </div>
+                            <span class="field-error" id="errorNombre">Por favor ingresa nombre y apellido completo (mínimo 5 caracteres).</span>
+                        </div>
+
+                        <!-- Cédula / DNI y Fecha Nacimiento -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="postulanteDoc" class="form-label">
+                                    Cédula o Documento de Identidad <span class="req">*</span>
+                                </label>
+                                <div class="input-with-icon">
+                                    <i data-lucide="id-card" class="input-icon"></i>
+                                    <input type="text" id="postulanteDoc" name="documento" class="form-control" placeholder="Ej. 402-1234567-8" required>
+                                </div>
+                                <span class="field-error" id="errorDoc">Ingresa un documento válido (mínimo 7 caracteres).</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="postulanteTelefono" class="form-label">
+                                    Teléfono / WhatsApp de Contacto <span class="req">*</span>
+                                </label>
+                                <div class="input-with-icon">
+                                    <i data-lucide="phone" class="input-icon"></i>
+                                    <input type="tel" id="postulanteTelefono" name="telefono" class="form-control" placeholder="Ej. 809-555-1234" required autocomplete="tel">
+                                </div>
+                                <span class="field-error" id="errorTelefono">Ingresa un número telefónico válido (mínimo 8 dígitos).</span>
+                            </div>
+                        </div>
+
+                        <!-- Correo Electrónico -->
+                        <div class="form-group">
+                            <label for="postulanteEmail" class="form-label">
+                                Correo Electrónico del Tutor o Postulante <span class="req">*</span>
+                            </label>
+                            <div class="input-with-icon">
+                                <i data-lucide="mail" class="input-icon"></i>
+                                <input type="email" id="postulanteEmail" name="email" class="form-control" placeholder="ejemplo@correo.com" required autocomplete="email">
+                            </div>
+                            <span class="field-error" id="errorEmail">Ingresa una dirección de correo electrónico válida.</span>
+                        </div>
+
+                        <!-- Carrera Técnica de Interés -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="carreraInteres" class="form-label">
+                                    Carrera Técnica de Interés <span class="req">*</span>
+                                </label>
+                                <div class="input-with-icon">
+                                    <i data-lucide="book-open" class="input-icon"></i>
+                                    <select id="carreraInteres" name="carrera" class="form-control" required>
+                                        <option value="" disabled selected>Selecciona una carrera...</option>
+                                        <option value="informatica">Informática (Desarrollo y Redes)</option>
+                                        <option value="contabilidad">Contabilidad y Finanzas</option>
+                                        <option value="ebanisteria">Ebanistería y Diseño de Muebles</option>
+                                        <option value="confeccion">Confección y Patronaje Industrial</option>
+                                        <option value="enfermeria">Cuidados de Enfermería</option>
+                                        <option value="mercadeo">Mercadeo y Gestión Comercial</option>
+                                    </select>
+                                </div>
+                                <span class="field-error" id="errorCarrera">Selecciona la carrera técnica de tu preferencia.</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="modalidadTurno" class="form-label">
+                                    Tanda o Turno Escolar <span class="req">*</span>
+                                </label>
+                                <div class="input-with-icon">
+                                    <i data-lucide="sun" class="input-icon"></i>
+                                    <select id="modalidadTurno" name="turno" class="form-control" required>
+                                        <option value="extendida" selected>Jornada Escolar Extendida (8:00 AM - 4:00 PM)</option>
+                                        <option value="matutina">Tanda Matutina (7:30 AM - 12:30 PM)</option>
+                                        <option value="vespertina">Tanda Vespertina (1:00 PM - 5:30 PM)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mensaje o Comentario Adicional -->
+                        <div class="form-group">
+                            <label for="postulanteNotas" class="form-label">
+                                Comentarios o Preguntas Adicionales (Opcional)
+                            </label>
+                            <textarea id="postulanteNotas" name="notas" class="form-control" rows="3" placeholder="Cuéntanos por qué te apasiona esta carrera técnica o si tienes alguna necesidad especial..."></textarea>
+                        </div>
+
+                        <!-- Botones de Acción -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" id="cancelModalBtn">Cancelar</button>
+                            <button type="submit" class="btn btn-primary" id="submitFormBtn">
+                                <i data-lucide="send" class="btn-icon"></i>
+                                <span>Enviar Pre-inscripción</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Vista de Éxito / Confirmación (Oculta por defecto) -->
+                    <div id="formSuccessContainer" class="form-success-box" hidden>
+                        <div class="success-icon-animation">
+                            <i data-lucide="check-circle" class="success-icon"></i>
+                        </div>
+                        <h4 class="success-title">¡Pre-inscripción Registrada Exitosamente!</h4>
+                        <p class="success-text">
+                            Muchas gracias por dar este paso hacia tu futuro con <strong>Fe y Alegría</strong>. Hemos generado tu comprobante preliminar de admisión:
+                        </p>
+                        
+                        <div class="folio-ticket">
+                            <div class="folio-label">FOLIO DE PRE-INSCRIPCIÓN:</div>
+                            <div class="folio-code" id="folioCodeDisplay">FYAL-2026-0000</div>
+                            <div class="folio-details" id="folioDetailsDisplay">
+                                <!-- Llenado dinámicamente vía app.js -->
+                            </div>
+                        </div>
+
+                        <p class="success-subtext">
+                            Te enviamos una copia a tu correo y te contactaremos vía WhatsApp para coordinar tu entrevista y entrega de documentos oficiales.
+                        </p>
+
+                        <div class="modal-footer justify-center">
+                            <button type="button" class="btn btn-primary" id="successCloseBtn">
+                                <i data-lucide="thumbs-up" class="btn-icon"></i>
+                                <span>Entendido y Cerrar</span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+         BOTÓN FLOTANTE RÁPIDO (FLOATING ACTION BUTTON)
+         Permite abrir el modal de admisiones en cualquier momento.
+         ============================================================ -->
+    <aside class="floating-fab-container">
+        <button type="button" class="floating-admissions-btn open-modal-btn" data-modal="preinscripcionModal" aria-label="Abrir formulario de Admisiones 2026">
+            <span class="fab-pulse"></span>
+            <i data-lucide="graduation-cap" class="fab-icon"></i>
+            <span class="fab-text">Inscripciones 2026</span>
+        </button>
+    </aside>
+
+    <!-- ============================================================
+         06. PIE DE PÁGINA COMPLETO (FOOTER)
+         Información institucional, redes sociales y créditos Fe y Alegría.
+         ============================================================ -->
+    <footer class="footer-wrapper">
+        <div class="container footer-container">
+            <div class="footer-main-grid">
+
+                <!-- Columna 1: Identidad Fe y Alegría -->
+                <div class="footer-brand-col">
+                    <div class="brand-logo footer-logo">
+                        <div class="brand-badge badge-footer">
+                            <i data-lucide="graduation-cap"></i>
+                        </div>
+                        <div class="brand-text">
+                            <span class="brand-title text-white">Liceo Técnico Profesional</span>
+                            <span class="brand-subtitle text-sky">Fe y Alegría · Movimiento de Educación Popular</span>
+                        </div>
+                    </div>
+                    <p class="footer-mission-text">
+                        Nacidos del corazón de las comunidades para brindar educación técnica de excelencia, impulsando la dignidad de las personas y la transformación social con amor y justicia.
+                    </p>
+                    <div class="footer-social-links">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Síguenos en Facebook">
+                            <i data-lucide="facebook"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Síguenos en Instagram">
+                            <i data-lucide="instagram"></i>
+                        </a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Canal de YouTube">
+                            <i data-lucide="youtube"></i>
+                        </a>
+                        <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Escríbenos por WhatsApp">
+                            <i data-lucide="message-circle"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Columna 2: Carreras Técnicas -->
+                <div class="footer-nav-col">
+                    <h4 class="footer-col-title">Carreras Técnicas</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="#carreras" class="footer-link tab-quick-link" data-target-tab="informatica">Informática</a></li>
+                        <li><a href="#carreras" class="footer-link tab-quick-link" data-target-tab="contabilidad">Contabilidad</a></li>
+                        <li><a href="#carreras" class="footer-link tab-quick-link" data-target-tab="ebanisteria">Ebanistería</a></li>
+                        <li><a href="#carreras" class="footer-link tab-quick-link" data-target-tab="confeccion">Confección y Patronaje</a></li>
+                        <li><a href="#carreras" class="footer-link tab-quick-link" data-target-tab="enfermeria">Enfermería</a></li>
+                        <li><a href="#carreras" class="footer-link tab-quick-link" data-target-tab="mercadeo">Mercadeo</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Enlaces Institucionales -->
+                <div class="footer-nav-col">
+                    <h4 class="footer-col-title">Enlaces Rápidos</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="#inicio" class="footer-link">Inicio</a></li>
+                        <li><a href="#nosotros" class="footer-link">Filosofía Fe y Alegría</a></li>
+                        <li><a href="#noticias" class="footer-link">Noticias y Eventos</a></li>
+                        <li><a href="#contacto" class="footer-link">Contacto y Ubicación</a></li>
+                        <li><a href="#preinscripcionModal" class="footer-link open-modal-btn" data-modal="preinscripcionModal">Requisitos de Admisión</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 4: Horario & Ubicación -->
+                <div class="footer-nav-col">
+                    <h4 class="footer-col-title">Atención al Público</h4>
+                    <div class="footer-contact-items">
+                        <div class="footer-contact-item">
+                            <i data-lucide="clock" class="f-contact-icon"></i>
+                            <div>
+                                <span class="f-label">Horario Docente:</span>
+                                <span class="f-val">Lunes a Viernes · 8:00 AM - 4:00 PM</span>
+                            </div>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i data-lucide="map-pin" class="f-contact-icon"></i>
+                            <div>
+                                <span class="f-label">Ubicación:</span>
+                                <span class="f-val">Av. Fe y Alegría No. 45, Sector Los Educadores</span>
+                            </div>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i data-lucide="mail" class="f-contact-icon"></i>
+                            <div>
+                                <span class="f-label">Correo Institucional:</span>
+                                <span class="f-val">contacto@liceofeyalegria.edu</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Barra inferior con copyright -->
+            <div class="footer-bottom-bar">
+                <p class="copyright-text">
+                    &copy; 2026 Liceo Técnico Profesional Fe y Alegría. Todos los derechos reservados.
+                </p>
+                <div class="footer-legal-links">
+                    <span>Educación Popular y Promoción Social</span>
+                    <span class="dot-separator">•</span>
+                    <span>Valores · Fe · Alegría</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================================
+         SCRIPT PRINCIPAL (LÓGICA E INTERACTIVIDAD)
+         ============================================================ -->
+    <script src="app.js"></script>
+</body>
+</html>
